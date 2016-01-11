@@ -26,7 +26,7 @@
  ******************************************************************************/
 
 var TAimgLoader = function () {
-  var imgUrl = "./last-image.php";
+  var imgUrl = "./last-image.php?cam=0";
 
   // <div id="camera_img_wrapper"> element is parent for image from camera in the page
   var imageElmId = "camera_img_wrapper";
@@ -36,7 +36,7 @@ var TAimgLoader = function () {
 
   var reloadImg = function() {
     //attribute 'id' is used to force browser to download the file
-    imgSelf.setAttribute("src",imgUrl + "?id=" + (new Date().getTime()));
+    imgSelf.setAttribute("src",imgUrl + "&id=" + (new Date().getTime()));
   }
 
   document.getElementById(imageElmId).appendChild(imgSelf);
